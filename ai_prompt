@@ -1,0 +1,76 @@
+## Context
+
+I have no formal technical background but have started learning Python for data analysis. I have already completed and mastered the following (do NOT re-teach these, just briefly reference them when relevant):
+
+**Completed topics:**
+- Variables, data types, print statements
+- Arithmetic operators, revenue/profit-style business calculations
+- Comparison operators
+- Conditionals: `if`, `elif`, `else`
+- Boolean logic: `AND`, `OR`, `NOT`
+- Lists (creation, indexing, `len()`, `sum()`)
+
+## Your Task
+
+Create a single Jupyter notebook (`.ipynb`) file, importable directly into Google Colab, that teaches me the next stage of my Data Analyst / Data Science path as a fully self-contained, interactive textbook. I should be able to go from zero prior knowledge of each new topic to being able to apply it in a real job, without needing to come back and ask follow-up questions.
+
+## Topic Curriculum (in this order)
+
+1. **Python fundamentals, continued**
+   - `max()`, `min()`, `mean` (manual calculation and via `statistics`/`sum`/`len`)
+   - List operations: add, append, prepend/insert, remove, delete (`pop`, `del`), insert at index, slicing, indexing (including negative indexing)
+   - Looping: `for` loops, `while` loops, looping with `range()`, looping with `enumerate()`, skipping/filtering items mid-loop (`continue`, `break`), nested loops
+   - List comprehensions (basic, with conditionals)
+   - Reversing lists (`reverse()`, slicing, `reversed()`)
+2. **Dictionaries** — creation, keys/values/items, adding/updating/removing entries, nested dictionaries, looping over dictionaries, dictionary comprehensions, common use cases
+3. **Pandas** — Series vs DataFrame, reading data (CSV and from dictionaries), columns and rows, selecting data (`.loc`, `.iloc`), filtering, sorting, grouping (`groupby`), aggregation, handling missing values (`isna`, `fillna`, `dropna`), detecting and cleaning messy/inconsistent data, merging/joining, basic data manipulation workflows
+4. **NumPy** — arrays vs lists, array creation, indexing/slicing, vectorized operations, broadcasting, useful array methods, array data types, when to use NumPy vs Pandas
+5. **Matplotlib** (and brief Seaborn where it clearly helps) — figure/axes basics, line charts, bar charts, pie charts (with a note on when pie charts are/aren't appropriate), histograms, scatter plots, labeling/titling/legends, subplots, styling, choosing the right chart for the data
+6. **Scikit-learn** — what machine learning is at a conceptual level, train/test splits, a basic regression model, a basic classification model, fitting/predicting/scoring, interpreting results, visualizing model output/predictions against actual data
+
+## Structure Required for EVERY Lesson
+
+Each lesson (each topic/sub-topic above) must include, in this order:
+
+1. **Markdown intro cell** — explain the concept assuming zero background. Cover:
+   - What the concept is, in plain language
+   - Why it exists / what problem it solves
+   - A real-world analogy that makes the abstract idea concrete
+   - A real-life, non-code example
+   - How this is actually used in a real Data Analyst/Data Scientist job — be specific (e.g., "you'd use `groupby` when your manager asks for total sales by region")
+2. **Worked example cells** — fully written, runnable code demonstrating the concept, with markdown commentary explaining what each line does and why
+3. **"Your turn" practice cells** — a task description, a code cell with a placeholder (e.g., `# YOUR CODE HERE`) and a commented hint, where I write my own code
+4. **Self-check cell** — runs immediately after each practice cell, checks my code/output automatically (via `assert` or comparison against expected results), and prints one of:
+   - ✅ Pass message
+   - ❌ Fail message + a specific, actionable hint (not the answer) if the concept isn't a later "test" section
+5. **End-of-lesson quick quiz** — 2-4 short questions (mix of conceptual multiple-choice via a variable/input pattern, and small coding challenges), self-graded with clear feedback
+6. **Small hands-on test between major lessons** — a slightly bigger, multi-step exercise combining everything just learned, self-graded, with hints available if I get it wrong (e.g., a `show_hint()` function I can optionally call)
+
+## Grading / Self-Reliance Requirements
+
+- Every practice, quiz, and test cell must be **runnable and self-grading** — I should never need to ask an external AI whether I got it right.
+- Use a consistent, simple pattern throughout (e.g., a reusable `check_answer(user_result, expected_result, hint_text)` helper function defined once near the top and reused everywhere) so the grading logic doesn't have to be reinvented and debugged in every cell.
+- Track my running score in a persistent variable/dictionary (e.g., `progress = {"lesson": score}`) that updates as I complete sections, so the final report can reference it.
+- Hints should guide my thinking, not hand me the solution. A full solution can optionally be revealed in a collapsed/clearly-marked cell **after** the hint, for when I'm truly stuck.
+
+## Capstone Project
+
+After all topics are covered, include a mini case-study project that requires combining Python fundamentals + Pandas + NumPy + Matplotlib + scikit-learn on a single dataset (e.g., a business/sales dataset — synthetic data generated in-notebook is fine so there's no external file dependency). Structure it as guided steps with helpful hints at each stage (not a blank-page assignment), so I can complete it independently but not get stuck.
+
+## Final Report
+
+A closing section that:
+- Summarizes every topic covered and whether I passed each self-check/quiz/test
+- Shows my total score / completion percentage using the `progress` tracking variable
+- Gives a clear pass/fail or readiness assessment
+- Lists specific topics I should review if I scored low anywhere
+
+## Hard Requirements
+
+- **No external file dependencies** — any dataset used must be generated in-notebook (via pandas/numpy/randomization) so the notebook runs standalone in Colab with zero setup beyond `pip install` for any non-default packages.
+- **Every code cell must run without errors** when executed top to bottom in a fresh Colab runtime. Test/self-verify logic before finalizing.
+- Keep a consistent tone and format across all lessons (headers, emoji checkmarks, structure) matching the style already established in my prior learning (✅/✔ markers, business-relevant examples like revenue/profit).
+- Include a table of contents cell at the very top with markdown links to each section.
+- Build the notebook **module by module** (Python fundamentals → Dictionaries → Pandas → NumPy → Matplotlib → Scikit-learn → Capstone → Report), fully completing and internally checking each module before moving to the next, rather than sketching all modules shallowly first. If the full notebook cannot be completed in one response, finish the current module completely and clearly state which module comes next.
+
+---
